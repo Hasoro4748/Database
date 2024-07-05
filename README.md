@@ -1,9 +1,20 @@
-#Database study
-> Database 실습 원격 저장소
+# Java study
+> Java 실습 원격 저장소
 
-## 1.Git&Github 개요
-1) Git 설치
-2) Git bash 기본 명령어
+## 1.데이터베이스 개요와 MySQL
+1) 
+2) 
 
-### MD 문법 참고
-https://docs.github.com/en/articles/basic-writing-and-formatting-systax
+## 2.SQL 기초
+1) aa
+2) aa
+
+## 3.제약조건
+1) aa
+2) aa
+
+
+## 4.SQL 고급
+1) aa
+2) aa
+   
