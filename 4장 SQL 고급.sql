@@ -1,7 +1,7 @@
 #날짜 : 2024/07/03
 #이름 : 강중원
 #내용 : 4장 SQL 고급
-
+SET SESSION sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
 #실습 4-1
 CREATE TABLE `Member` (
 	`uid`	VARCHAR(10) PRIMARY KEY,
@@ -160,7 +160,7 @@ select sum(sale), AVG(sale) FROM `sales` where `year` = 2019 and `sale` >= 50000
 select min(sale) AS `최저매출` , max(sale) AS `최고매출` FROM `sales` where `year` = 2020;
 
 #실습 4-10
-SET SESSION sql_mode = 'STRICT_TRANS_TABLES,NO_ZERO_IN_DATE,NO_ZERO_DATE,ERROR_FOR_DIVISION_BY_ZERO,NO_ENGINE_SUBSTITUTION';
+
 SELECT * FROM `Sales` GROUP BY `uid`;
 SELECT * FROM `Sales` GROUP BY `year`;
 SELECT * FROM `Sales` GROUP BY `uid`, `year`;
