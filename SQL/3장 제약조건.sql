@@ -3,7 +3,7 @@
 #내용 : 3장 제약조건
 
 #실습 3-1
-create table `useruser22`(
+create table `user2`(
 	`uid` VARCHAR(10) PRIMARY KEY,
     `name` VARCHAR(10),
     `birth` CHAR(10),

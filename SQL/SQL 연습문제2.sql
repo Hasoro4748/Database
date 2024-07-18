@@ -8,6 +8,10 @@ create database `Bank`;
 create user 'bank'@'%' identified by '1234';
 grant all privileges on `bank`.* to 'bank'@'%';
 flush privileges;
+
+drop table `bank_customer`;
+drop table `bank_account`;
+drop table `bank_transaction`;
 #실습 2-2
 Create table `bank_customer`(
 	`c_no` VARCHAR(14) primary key,
@@ -33,7 +37,7 @@ Create table `bank_transaction`(
 );
 use `bank`;
 #실습 2-3
-drop table `bank_customer`;
+#drop table `bank_customer`;
 insert into `bank_customer` value ('102-22-51094', '부산의원', 2, '051-518-1010', '부산시 남구'),
 									('220-82-52237', '(주)한국전산', 2, '02-134-1045', '서울시 강서구'),
                                     ('361-22-42687', '(주)정보산업', 2, '031-563-1253', '경기도 광명시'),
