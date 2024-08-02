@@ -1,0 +1,37 @@
+# 날짜 2024/07/19
+# 이름 : 강중원
+# 내용 : 8장 트랜잭션 실습하기
+
+#실습 8 -1
+
+update `bank_account` set `a_balance` = 100000 where `a_no` = '101-11-1001';
+
+set autocommit = 0;
+select @@autocommit;
+
+start transaction;
+Select * from `bank_account`;
+
+UPDATE `bank_account` set `a_balance` = `a_balance` - 10000
+	where `a_no` = '101-11-1001';
+    
+UPDATE `bank_account` set `a_balance` = `a_balance` + 10000
+	where `a_no` = '101-11-1212';
+    
+commit;
+
+select * from `bank_acount`;
+
+# 실습 8-2
+start transaction;
+Select * from `bank_account`;
+
+UPDATE `bank_account` set `a_balance` = `a_balance` - 10000
+	where `a_no` = '101-11-1001';
+    
+UPDATE `bank_account` set `a_balance` = `a_balance` + 10000
+	where `a_no` = '101-11-1212';
+    
+rollback;
+
+select * from `bank_account`;
